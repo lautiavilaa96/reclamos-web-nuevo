@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class EmailService {
 
   // Apunta a la subcarpeta api/ dentro de reclamos-web
-  private baseUrl = 'https://www.eprern.gov.ar/reclamos-web/api/index.php';
+  private baseUrl = 'aqui va la api que conecta c el envio de mail ';
 
   constructor(private http: HttpClient) {}
 
