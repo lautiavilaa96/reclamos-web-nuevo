@@ -1,0 +1,100 @@
+.popup-mobile-container {
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.popup-title {
+    color: #42752a;
+    font-size: 1.2rem;
+    margin-top: 0;
+    border-bottom: 2px solid #94ca4d;
+    padding-bottom: 6px;
+}
+
+.popup-sub {
+    font-size: 0.95rem;
+    color: #1b4332; /* Verde oscuro para máxima legibilidad */
+    font-weight: 700; /* Negrita marcante */
+    line-height: 1.45;
+    margin: 0 0 16px 0;
+    background-color: #f0fdf4; /* Fondo verde muy claro */
+    border-left: 4px solid #8cc63f; /* Franja lateral verde EPRE */
+    padding: 10px 12px;
+    border-radius: 6px;
+}
+
+.popup-list {
+    padding-left: 18px;
+    margin: 15px 0;
+}
+
+.popup-list li {
+    margin-bottom: 12px;
+    font-size: 0.88rem;
+    color: #333;
+    line-height: 1.3;
+}
+
+/* --- CENTRADO DEL BOTÓN DE ARTEFACTOS --- */
+.html-action-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    margin-left: -18px; /* Compensación del padding del UL para centrado absoluto */
+}
+
+.btn-html-popup {
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 340px; /* Tamaño unificado */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-html-popup:hover {
+    background-color: #21523e;
+}
+
+.btn-html-popup:active {
+    transform: scale(0.98);
+}
+
+/* --- CENTRADO DEL BOTÓN ENTENDIDO --- */
+.popup-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+.btn-entendido {
+    background-color: #94ca4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 340px; /* Tamaño unificado */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-entendido:hover {
+    background-color: #83b83f;
+}
+
+.btn-entendido:active {
+    transform: scale(0.98);
+}

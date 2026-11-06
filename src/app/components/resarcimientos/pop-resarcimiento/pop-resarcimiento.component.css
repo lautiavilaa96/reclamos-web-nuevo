@@ -1,0 +1,176 @@
+.button,
+.input,
+.select,
+.textarea {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+/* CONTENEDOR ADAPTABLE (Se eliminó width: 700px) */
+.modal-container {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 85vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+.modal-container-header {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    background-color: #fff;
+}
+
+.modal-container-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.modal-container-title svg {
+    width: 26px;
+    height: 26px;
+    color: #750550;
+}
+
+/* CUERPO CON SCROLL Y PADDING ADAPTADO */
+.modal-container-body {
+    padding: 16px;
+    overflow-y: auto;
+    flex: 1;
+    -webkit-overflow-scrolling: touch;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.rtf p {
+    margin: 0 0 12px 0;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: #333;
+}
+
+/* AJUSTE DE LISTAS PARA NO SALIRSE DE PANTALLA */
+.rtf ol, .rtf ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.rtf ol li, .rtf ul li {
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* PIE FIJO CON BOTONES */
+.modal-container-footer {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid #ddd;
+    gap: 10px;
+    flex-shrink: 0;
+    background-color: #fff;
+}
+
+.button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s ease;
+    font-size: 0.85rem;
+}
+
+.button.is-ghost {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.button.is-ghost:hover,
+.button.is-ghost:focus {
+    background-color: #dfdad7;
+}
+
+.button.is-primary {
+    background-color: #750550;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.button.is-primary:hover,
+.button.is-primary:focus {
+    background-color: #4a0433;
+}
+
+.icon-button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.15s ease;
+}
+
+.icon-button svg {
+    width: 22px;
+    height: 22px;
+}
+
+.icon-button:hover,
+.icon-button:focus {
+    background-color: #dfdad7;
+}
+
+/* REGLETA MÓVIL PANTALLAS PEQUEÑAS (<= 480px) */
+@media screen and (max-width: 480px) {
+    .modal-container-header {
+        padding: 12px 14px;
+    }
+
+    .modal-container-body {
+        padding: 12px 14px;
+    }
+
+    .rtf ol, .rtf ul {
+        padding-left: 16px;
+    }
+
+    .modal-container-footer {
+        padding: 10px 14px;
+    }
+
+    .modal-container-footer .button {
+        flex: 1;
+        text-align: center;
+    }
+}

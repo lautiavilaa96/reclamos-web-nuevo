@@ -1,0 +1,21 @@
+<div class="popup-mobile-container">
+    <h2 class="popup-title">{{ data.titulo }}</h2>
+    <p class="popup-sub">{{ data.subtitulo }}</p>
+    
+    <ul class="popup-list">
+        <li *ngFor="let item of data.items">
+            <span>{{ item.texto }}</span>
+            
+            <!-- Botón especial para items marcados con (HTML) -->
+            <div *ngIf="item.tieneHtml" class="html-action-container">
+                <button type="button" class="btn-html-popup" (click)="abrirModalArtefactos()">
+                    📋 Cargar detalle de artefactos y consumo
+                </button>
+            </div>
+        </li>
+    </ul>
+    
+    <div class="popup-footer">
+        <button class="btn-entendido" (click)="cerrar()">Entendido</button>
+    </div>
+</div>

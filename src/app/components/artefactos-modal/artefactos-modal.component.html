@@ -1,0 +1,73 @@
+<div class="modal-container">
+    <!-- CABECERA FIJA -->
+    <div class="modal-header">
+        <h2 class="modal-title">3. Artefactos eléctricos</h2>
+        <p class="modal-subtitle">Indique cantidad y horas de uso diario de sus electrodomésticos</p>
+    </div>
+    
+    <!-- FORMULARIO CON SCROLL INTERNO -->
+    <form [formGroup]="artefactosForm" (ngSubmit)="guardar()" class="modal-form">
+        <div class="modal-body">
+            <!-- Cabecera visible en pantallas medianas / PC -->
+            <div class="table-header">
+                <div class="th-nombre">Artefacto</div>
+                <div class="th-cant">Cantidad</div>
+                <div class="th-horas">Horas/día</div>
+            </div>
+            
+            <!-- Lista principal de artefactos -->
+            <div class="table-body" formArrayName="items">
+                <div 
+                class="table-row" 
+                *ngFor="let item of items.controls; let i = index" 
+                [formGroupName]="i">
+                
+                <div class="col-nombre">{{ item.get('nombre')?.value }}</div>
+                
+                <div class="col-inputs">
+                    <div class="input-group">
+                        <span class="mobile-label">Cant:</span>
+                        <input type="number" min="0" placeholder="0" formControlName="cantidad">
+                    </div>
+                    <div class="input-group">
+                        <span class="mobile-label">Horas:</span>
+                        <input type="number" min="0" max="24" step="0.5" placeholder="0" formControlName="horas">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-divider">Otros artefactos</div>
+        
+        <!-- Lista de otros artefactos -->
+        <div class="table-body" formArrayName="otros">
+            <div 
+            class="table-row row-otro" 
+            *ngFor="let otro of otros.controls; let j = index" 
+            [formGroupName]="j">
+            
+            <div class="col-nombre">
+                <input type="text" placeholder="Ej: Pava eléctrica" formControlName="nombre" class="input-nombre">
+            </div>
+            
+            <div class="col-inputs">
+                <div class="input-group">
+                    <span class="mobile-label">Cant:</span>
+                    <input type="number" min="0" placeholder="0" formControlName="cantidad">
+                </div>
+                <div class="input-group">
+                    <span class="mobile-label">Horas:</span>
+                    <input type="number" min="0" max="24" step="0.5" placeholder="0" formControlName="horas">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PIE FIJO CON BOTONES SIEMPRE VISIBLES -->
+<div class="modal-actions">
+    <button type="button" class="btn-cancel" (click)="cancelar()">Cancelar</button>
+    <button type="submit" class="btn-save">Guardar y Transcribir</button>
+</div>
+</form>
+</div>
